@@ -18,6 +18,7 @@ body {
     max-width: 1600px;
     background-color: #EAE5E9;
     font-family: 'Lato', sans-serif;
+    margin: 0 auto;
 }
 
 .wrapper {

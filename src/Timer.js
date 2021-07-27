@@ -31,13 +31,13 @@ const TimeForm = (props) => {
     return (
         <form className="timeForm" onSubmit = {(e) => props.handleSubmit(e, timeAmount)}>
             <select required id="timeSelect" name="timeSelect"  value={timeAmount} onChange={updateTime}>
-                <option value="" disabled>Select option</option>
+                <option value="" disabled>Select Time</option>
                 <option value="600">10 minutes</option>
                 <option value="1200">20 minutes</option>
                 <option value="1800">30 minutes</option>
                 <option value="2400">40 minutes</option>
             </select>
-            <button className="dropBtn" type="submit" name="submit" value="submit" onClick={props.startTiming()}>Start Timer</button>
+            <button className="dropBtn" type="submit" name="submit" value="submit" >Start Timer</button>
         </form>
     )
 }

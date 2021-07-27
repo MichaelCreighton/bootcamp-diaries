@@ -101,11 +101,6 @@ textarea:focus {
     outline: 1px solid rgba(35, 57, 91, 0.29) ;
 }
 
-input:focus,
-textarea:focus {
-    outline: 1px solid rgba(35, 57, 91, 0.1);
-}
-
 .divContainer {
     padding: 40px;
 }
@@ -125,7 +120,8 @@ textarea {
     color: #23395B;
     border: none;
     resize: none;
-    box-shadow: rgba(35, 57, 91, 0.19) 0px 10px 20px, rgba(35, 57, 91, 0.19) 0px 6px 6px;
+    box-shadow: rgba(35, 57, 91, 0.19) 0px 10px 20px, 
+                rgba(35, 57, 91, 0.19) 0px 6px 6px;
     background-image: url(./assets/dotted-grid-light.png);
     background-position: center;
     transition: all 0.15s ease-in;
@@ -202,15 +198,17 @@ textarea:placeholder-shown {
     margin-left: 15px;
     border: none;
     cursor: pointer;
-    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, 
+                rgba(35, 57, 91, 0.19) 3px 6px 6px;
 }
 
 #timeSelect {
-    box-shadow: rgba(35, 57, 91, 0.19) 0 10px 20px, rgba(35, 57, 91, 0.19) 0 6px 6px;
+    box-shadow: rgba(35, 57, 91, 0.19) 0 10px 20px, 
+                rgba(35, 57, 91, 0.19) 0 6px 6px;
     letter-spacing: 1px;
     padding: 0 5px;
     border: none;
-    background-color: #EAE5E9;
+    background-color: #78CAD2;
     color: #23395B;
     cursor: pointer;
 }
@@ -249,7 +247,8 @@ textarea:placeholder-shown {
 .promptForm button,
 .promptForm input,
 .randPrompt {
-    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, rgba(35, 57, 91, 0.19) 3px 6px 6px;
+    box-shadow: rgba(35, 57, 91, 0.19) 3px 10px 20px, 
+                rgba(35, 57, 91, 0.19) 3px 6px 6px;
     border: none;
 }
 
@@ -301,7 +300,7 @@ footer a:hover {
     background-color: #23395B;
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
-    rgba(35, 57, 91, 0.50) 3px 0px 6px;
+                rgba(35, 57, 91, 0.50) 3px 0px 6px;
     background-image: url(./assets/dotted-grid-dark.png);
 }
 
@@ -309,8 +308,13 @@ footer a:hover {
     background: #23395B;
     color: white;
     box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
-    rgba(35, 57, 91, 0.50) 3px 0px 6px;
+                rgba(35, 57, 91, 0.50) 3px 0px 6px;
 }
+.darkMode .promptForm button {
+    box-shadow: rgba(2, 6, 12, 0.50) 3px 0px 20px,
+                rgba(35, 57, 91, 0.50) 3px 0px 6px;
+}
+
 .darkMode input:focus,
 .darkMode textarea:focus {
     outline: 1px solid rgba(234, 229, 233, 0.29) ;

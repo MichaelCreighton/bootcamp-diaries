@@ -13,7 +13,6 @@ import Footer from './Footer';
 function App() {
 const [selected, setSelected] = useState(0);
 const [userEntryInput, setUserEntryInput] = useState('');
-const [finished, setFinished] = useState('');
 
 //gets value of selected option from TimeForm and prevents default behaviour of button
   const handleSubmit = (e, value) => {
@@ -26,41 +25,6 @@ const [finished, setFinished] = useState('');
     setUserEntryInput(e.target.value);
     
   }
-
-// sets buttonClicked to true when Timer Form button is clicked
-let buttonClicked = false;
-
-  const startTiming = () => {
-    buttonClicked = true;
-  }
-
-//timer that shows alert when user stops typing for 15 seconds
-
-  useEffect(() => {
-    let typingTimer = null;
-    if(buttonClicked === true) {
-      typingTimer = setTimeout(() => {
-          setFinished(userEntryInput);
-      }, 5000);
-      return () => {
-        clearTimeout(typingTimer);
-      }
-    }
-  }, [userEntryInput, buttonClicked])
-
-  useEffect(() => {
-    let alertTimer = null;
-    if (finished !== '') {
-      alertTimer = setTimeout(() => {
-          alert("Don't lose your flow — keep writing, you got this!")
-      }, 10000);
-    };
-    return () => {
-      clearTimeout(alertTimer);
-    }
-  }, [finished])
-  
-//end timer
 
   
   return (
@@ -76,7 +40,7 @@ let buttonClicked = false;
         <div className="divContainer">
           <div className="toolkitContainer">
             <Route exact path="/prompts/" component={Prompts} />
-            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} startTiming={startTiming}/>} />
+            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
             <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
           </div>
 

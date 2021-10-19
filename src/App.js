@@ -2,23 +2,23 @@ import './App.css';
 import logo from './assets/bootcampDiariesOutlined.png';
 import Prompts from './Prompts';
 import IconSet from './IconSet';
-import Timers from './Timer';
-import { TimeForm } from './Timer';
-import {useEffect, useState} from 'react';
+// import Timers from './Timer';
+// import { TimeForm } from './Timer';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Footer from './Footer';
 
 
 
 function App() {
-const [selected, setSelected] = useState(0);
+// const [selected, setSelected] = useState(0);
 const [userEntryInput, setUserEntryInput] = useState('');
 
 //gets value of selected option from TimeForm and prevents default behaviour of button
-  const handleSubmit = (e, value) => {
-    e.preventDefault();
-    setSelected(value);
-  }
+  // const handleSubmit = (e, value) => {
+  //   e.preventDefault();
+  //   setSelected(value);
+  // }
 
 // updates user entry from textarea every time it changes
   const handleEntryChange = (e) => {
@@ -40,8 +40,8 @@ const [userEntryInput, setUserEntryInput] = useState('');
         <div className="divContainer">
           <div className="toolkitContainer">
             <Route exact path="/prompts/" component={Prompts} />
-            <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
-            <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} />
+            {/* <Route exact path="/timers/" component = {props => <TimeForm handleSubmit={handleSubmit} />} />
+            <Route exact path="/timers/" component = {props => <Timers userChoice={selected} />} /> */}
           </div>
 
           <div className="entryContainer">

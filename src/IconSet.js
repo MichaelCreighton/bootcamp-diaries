@@ -1,4 +1,4 @@
-import { faEdit, faFile, faSave } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faEdit, faFile, faSave } from '@fortawesome/free-regular-svg-icons';
 import { faAdjust} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import firebase from "./firebase";
@@ -29,6 +29,9 @@ const IconSet = (props) => {
       <div className="icons slidingIcons">
         <Link to={`/`}>
           <FontAwesomeIcon className='page fa-rotate-270' size='2x' icon={faFile} title='Hide Toolbar' />
+        </Link>
+        <Link to={`/timers/`}>
+          <FontAwesomeIcon className='clock fa-rotate-270' size='2x' icon={faClock} title='Timer Toolbar' />
         </Link>
         <Link to={`/prompts/`}>
           <FontAwesomeIcon className='edit fa-rotate-270' size='2x' icon={faEdit} title='Prompt Toolbar' />
